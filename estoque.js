@@ -11,7 +11,8 @@ function mostrar(parte, titulo, valor) {
   const conteudo = document.createElement('pre');
   conteudo.textContent = typeof valor === 'string' ? valor : JSON.stringify(valor, null, 2);
   card.append(cabecalho, conteudo);
-  document.getElementById(parte).appendChild(card);
+  const areaResultados = document.getElementById(parte);
+  areaResultados.appendChild(card);
 }
 
 mostrar('parte1', '1.1 - Categorias', categorias);
